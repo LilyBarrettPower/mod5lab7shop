@@ -4,12 +4,14 @@ class FakeStoreLibrary {
     constructor() {
         this.products = ""
     }
-    // create a method fetchProducts within the class 
+    // create an async method fetchProducts within the class 
     async fetchProducts() {
         try {
+            // call the retrieve products and and store in this.products
             this.products = await this.retrieveProducts();
             return this.products;
         } catch (error) {
+            // error handling 
             throw error;
         }
     }
