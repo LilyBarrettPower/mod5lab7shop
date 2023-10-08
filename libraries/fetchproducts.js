@@ -5,23 +5,27 @@ class FakeStoreLibrary {
         this.products = ""
     }
     // create a method fetchProducts within the class 
-    // fetchProducts() {
-    //     // declare the variable data 
-    //     let data
-    //     // assign the result of calling the retrieveProducts() method
-    //     data = this.retrieveProducts()
-    //     // return this.products variable
-    //     return this.products
-    // }
+    async fetchProducts() {
+        try {
+            this.products = await this.retrieveProducts();
+            return this.products;
+        } catch (error) {
+            throw error;
+        }
+    }
     // create an async method retrieveProducts 
     async retrieveProducts() {
-        // use fetch to make an HTTP GET request to the fakestoreAPI
-        const response = await fetch('https://fakestoreapi.com/products');
-        if (!response.ok) { // if the response is not ok, there will be an erro
-            throw new Error('fetch unsuccessful');
+        try {
+            const response = await fetch('https://fakestoreapi.com/products');
+            if (!response.ok) { // if the response is not ok, there will be an erro
+                throw new Error('fetch unsuccessful');
+            }
+            return await response.json();
+        } catch (error) {
+            throw error;
         }
-        return await response.json();
     }
 }
+
 // export the fakestorelibrary 
 module.exports = FakeStoreLibrary;
