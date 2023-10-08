@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- add bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Add the font awesome library  -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="fakeStore.js"></script>
+    <!-- custom CSS -->
+</head>
+
+<body>
+    <h1 class="text-center">Fake Store</h1>
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- using bootstrap classes to construct the navbar -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="lab10store.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="lab10chart.html">Chart</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- created a navbar to display the charts page and home page for navigation  -->
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-6">
+                <select id="categorySelect" class="form-select">
+                    <!-- Using bootdtap form-select class  -->
+                    <option value="" selected>Show all categories</option>
+                    <!-- Categories will be added here by the JS script -->
+                </select>
+            </div>
+            <div class="col-md-6">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search for items...">
+                <!-- Add the html structure for the search input. using bootstrap form-control -->
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="card-container"></div>
+    <!-- This is where I will append the card data (json data). where cards will be displayed -->
+
+    <template id="cardTemplate">
+        <div class="col-sm-12 col-md-6 col-lg-3 my-3">
+            <div class="card h-100">
+                <div class="card-icon">
+                    <!-- create div to house the icon -->
+                    <i class="fa-solid fa-shop"></i>
+                    <!-- Placeholder icon -->
+                </div>
+                <img class="card-image" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">placeholder</h5>
+                    <p class="card-text">placeholder</p>
+                    <p class="card-price">placeholder</p>
+                </div>
+            </div>
+        </div>
+    </template>
+</body>
+</html>
