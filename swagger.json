@@ -10,7 +10,7 @@
         }
     },
     "host": "localhost:3004",
-    "basePath": "/",
+    "basePath": "/fakeStoreAPI",
     "tags": [
         {
             "name": "Store",
