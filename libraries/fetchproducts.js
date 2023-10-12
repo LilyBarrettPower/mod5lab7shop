@@ -22,6 +22,7 @@ class FakeStoreLibrary {
             if (!response.ok) { // if the response is not ok, there will be an erro
                 throw new Error('fetch unsuccessful');
             }
+            // if the response is ok return it in json format
             return await response.json();
         } catch (error) {
             throw error;

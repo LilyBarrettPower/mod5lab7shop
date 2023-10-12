@@ -1,0 +1,46 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "My Fake Shop Project",
+        "description": "My fake shop API",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:3004",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "Store",
+            "description": "API for getting fake store data"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "tags": [
+                    "Fake store"
+                ],
+                "summary": "Load the fake store",
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "This service shows you the fake store that is fetched from an external API"
+                    }
+                }
+            }
+        }
+    }
+}
