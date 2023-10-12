@@ -10,7 +10,7 @@
         }
     },
     "host": "localhost:3004",
-    "basePath": "/fakeStoreAPI",
+    "basePath": "/",
     "tags": [
         {
             "name": "Store",
@@ -27,7 +27,7 @@
         "application/json"
     ],
     "paths": {
-        "/": {
+        "/fakeStoreAPI": {
             "get": {
                 "tags": [
                     "Fake store"
